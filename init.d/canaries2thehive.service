@@ -1,0 +1,18 @@
+[Unit]
+Description=canaries2thehive
+After=multi-user.target
+
+[Service]
+Type=idle
+
+WorkingDirectory=/opt/canaries2thehive
+ExecStart=/usr/bin/python3 app.py runserver
+
+# Connects standard output to /dev/null
+StandardOutput=journal
+
+# Connects standard error to journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
