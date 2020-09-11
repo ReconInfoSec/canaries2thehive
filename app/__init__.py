@@ -100,5 +100,5 @@ def create_alert():
                                             response.text))
             sys.exit(0)
 
-        # Return
-        return "Hive Alert Created"
+    # Return
+    return "Hive Alerts Created"
